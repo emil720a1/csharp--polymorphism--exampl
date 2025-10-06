@@ -1,0 +1,14 @@
+/Users/mcaleg2006/RiderProjects/LearnC/LearnC/bin/Debug/net9.0/LearnC
+/Users/mcaleg2006/RiderProjects/LearnC/LearnC/bin/Debug/net9.0/LearnC.deps.json
+/Users/mcaleg2006/RiderProjects/LearnC/LearnC/bin/Debug/net9.0/LearnC.runtimeconfig.json
+/Users/mcaleg2006/RiderProjects/LearnC/LearnC/bin/Debug/net9.0/LearnC.dll
+/Users/mcaleg2006/RiderProjects/LearnC/LearnC/bin/Debug/net9.0/LearnC.pdb
+/Users/mcaleg2006/RiderProjects/LearnC/LearnC/obj/Debug/net9.0/LearnC.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mcaleg2006/RiderProjects/LearnC/LearnC/obj/Debug/net9.0/LearnC.AssemblyInfoInputs.cache
+/Users/mcaleg2006/RiderProjects/LearnC/LearnC/obj/Debug/net9.0/LearnC.AssemblyInfo.cs
+/Users/mcaleg2006/RiderProjects/LearnC/LearnC/obj/Debug/net9.0/LearnC.csproj.CoreCompileInputs.cache
+/Users/mcaleg2006/RiderProjects/LearnC/LearnC/obj/Debug/net9.0/LearnC.dll
+/Users/mcaleg2006/RiderProjects/LearnC/LearnC/obj/Debug/net9.0/refint/LearnC.dll
+/Users/mcaleg2006/RiderProjects/LearnC/LearnC/obj/Debug/net9.0/LearnC.pdb
+/Users/mcaleg2006/RiderProjects/LearnC/LearnC/obj/Debug/net9.0/LearnC.genruntimeconfig.cache
+/Users/mcaleg2006/RiderProjects/LearnC/LearnC/obj/Debug/net9.0/ref/LearnC.dll
