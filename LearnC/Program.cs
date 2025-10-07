@@ -1,38 +1,76 @@
 ﻿
-internal sealed class Cat
+public class Book
 {
-    private readonly string _breed;
-    private readonly string _name;
-    private readonly int _age;
+    public string Title { get; set; }
+    public string Author { get; set; }
+    public int Year {get; set; } 
+    public string ISBN { get; set; }
 
-    public Cat(string breed, string name, int age)
+    public Book(string title, string author, int year, string isbn)
     {
-        _breed = breed;
-        _name = name;
-        _age = age;
+        Title = title;
+        Author = author;
+        Year = year;
+        ISBN = isbn;
     }
 
-    public void Deconstruct(out string breed, out string name, out int age)
+    public override string ToString()
     {
-        breed = _breed;
-        name = _name;
-        age = _age;
+        return $"'{Title}' - {Author} ({Year} ISBN: {ISBN}";
     }
+}
 
-    public void Deconstruct(out string name, out int age)
-    {
-        name = _name;
-        age = _age;
-    }
+class Library()
+{
+  private List<Book> _books = new List<Book>();
+   public void AddBook(Book book)
+   {
+       if (book == null)
+       {
+           Console.WriteLine("Book is null");
+           return;
+       }
+       _books.Add(book);
+       Console.WriteLine($"Книга добавлена: {book.Title}");
+   }
+
+   public bool RemoveBook(string title)
+   {
+       foreach (var book in _books)
+       {
+           if (book.Title == title)
+           {
+               _books.Remove(book);
+               return true;
+           }
+       }
+       return false;
+   }
+
+   public Book SearchBookByTitle(string title)
+   {
+       if (title == null)
+       {
+           return null;
+       }
+
+       foreach (var book in _books)
+       {
+           if (book.Title == title)
+           {
+               return book;
+           }
+       }
+
+       return null;
+   }
+   
 }
 class Program()
 {
     static void Main()
     {
-        Cat cat = new Cat("Line", "Stepan", 4);
-        var (breed, name, age) = cat;
-        var (_, catAge) = cat;
-        Console.WriteLine(catAge);
+   
 
     }
 }
