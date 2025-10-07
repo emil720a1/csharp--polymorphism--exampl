@@ -1,52 +1,38 @@
 ﻿
-internal class Animal
+internal sealed class Cat
 {
-    public string Name { get; set; }
+    private readonly string _breed;
+    private readonly string _name;
+    private readonly int _age;
 
-    protected string BaseClassName { get; } = nameof(Animal);
-    public virtual void MakeSound()
+    public Cat(string breed, string name, int age)
     {
-        Console.WriteLine("Звук не определен");   
+        _breed = breed;
+        _name = name;
+        _age = age;
+    }
+
+    public void Deconstruct(out string breed, out string name, out int age)
+    {
+        breed = _breed;
+        name = _name;
+        age = _age;
+    }
+
+    public void Deconstruct(out string name, out int age)
+    {
+        name = _name;
+        age = _age;
     }
 }
-
-internal class Dog : Animal
-{
-    public new string Name { get; set; } = "Спаниэль";
-    public override void MakeSound()
-    {
-        Console.WriteLine("Woof");  
-    }
-    public void PrintBaseClassName()
-    {
-        Console.WriteLine("Базовый класс не определен");
-    }
-}
-
-internal class Cat : Animal
-{
-    public new void MakeSound()
-    {
-        Console.WriteLine("Meow"); 
-        
-    }
-}
-
-class Program
+class Program()
 {
     static void Main()
     {
-        Dog dog = new Dog();
-        Animal animal = dog;
-        dog.MakeSound();
-        animal.MakeSound();
+        Cat cat = new Cat("Line", "Stepan", 4);
+        var (breed, name, age) = cat;
+        var (_, catAge) = cat;
+        Console.WriteLine(catAge);
 
-        Cat cat = new Cat();
-        Animal animal2 = cat;
-        cat.MakeSound();
-        animal2.MakeSound();
-        
-        
     }
-    
 }

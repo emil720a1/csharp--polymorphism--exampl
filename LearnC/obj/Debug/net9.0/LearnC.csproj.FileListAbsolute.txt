@@ -12,3 +12,4 @@
 /Users/mcaleg2006/RiderProjects/LearnC/LearnC/obj/Debug/net9.0/LearnC.pdb
 /Users/mcaleg2006/RiderProjects/LearnC/LearnC/obj/Debug/net9.0/LearnC.genruntimeconfig.cache
 /Users/mcaleg2006/RiderProjects/LearnC/LearnC/obj/Debug/net9.0/ref/LearnC.dll
+/Users/mcaleg2006/RiderProjects/LearnC/LearnC/obj/Debug/net9.0/LearnC.sourcelink.json
