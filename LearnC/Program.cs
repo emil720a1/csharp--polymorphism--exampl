@@ -1,76 +1,27 @@
 ﻿
-public class Book
-{
-    public string Title { get; set; }
-    public string Author { get; set; }
-    public int Year {get; set; } 
-    public string ISBN { get; set; }
+record class PointRecord(string Name, int age, int height);
 
-    public Book(string title, string author, int year, string isbn)
-    {
-        Title = title;
-        Author = author;
-        Year = year;
-        ISBN = isbn;
-    }
-
-    public override string ToString()
-    {
-        return $"'{Title}' - {Author} ({Year} ISBN: {ISBN}";
-    }
-}
-
-class Library()
-{
-  private List<Book> _books = new List<Book>();
-   public void AddBook(Book book)
-   {
-       if (book == null)
-       {
-           Console.WriteLine("Book is null");
-           return;
-       }
-       _books.Add(book);
-       Console.WriteLine($"Книга добавлена: {book.Title}");
-   }
-
-   public bool RemoveBook(string title)
-   {
-       foreach (var book in _books)
-       {
-           if (book.Title == title)
-           {
-               _books.Remove(book);
-               return true;
-           }
-       }
-       return false;
-   }
-
-   public Book SearchBookByTitle(string title)
-   {
-       if (title == null)
-       {
-           return null;
-       }
-
-       foreach (var book in _books)
-       {
-           if (book.Title == title)
-           {
-               return book;
-           }
-       }
-
-       return null;
-   }
-   
-}
-class Program()
+class Program
 {
     static void Main()
     {
-   
+        // var tuple = (name: "Oleg", age: 18, height: 179);
+        (string, int, int ) tuple = (name: "Oleg", age: 18, height: 180);
+         Console.WriteLine(tuple.Item2);
+         (string, int, int) GetPersonInfo() => (name: "Oleg", age: 18, height: 180);
+         var tuple2 = GetPersonInfo();
+         Console.WriteLine(tuple2.Item1);
+         
+         
+         var pointRecord = new PointRecord("Oleg", 18, 180);
+         (string name, int age, int height) = pointRecord;
+
+         var second = pointRecord with { Name = "McOleg", age = 21 };
+         Console.WriteLine($"pointRecord {pointRecord.Name}");
+         
+         Console.WriteLine($"second {second.Name}");
+
+
 
     }
 }
